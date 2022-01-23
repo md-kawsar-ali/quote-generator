@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quote Generator</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="h-screen bg-orange-500 flex justify-center items-center">
+        <div class="w-10/12 md:w-3/5">
+            <div class="text-center">
+                <h1 class="font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-8">Random Quote Generator</h1>
+                <button onclick="generateQuote()" class="py-4 px-8 text-sm text-orange-600 font-bold uppercase bg-white rounded-sm mb-8">Generate Quote</button>
+            </div>
+
+            <blockquote class="bg-white p-5 md:p-8 rounded-lg text-center md:text-right">
+                <p id="quote" class="text-xl text-slate-800 italic mb-4 text-center md:text-left leading-relaxed"></p>
+                <strong id="author" class="text-slate-700 capitalize md:mx-4"></strong>
+            </blockquote>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
