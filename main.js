@@ -75,12 +75,18 @@ const arrayOfQuotes = [
     }
 ];
 
-// Set a By Default Quote
-document.querySelector('#quote').textContent = `\"${arrayOfQuotes[0].quote}\"`;
-document.querySelector('#author').textContent = `- ${arrayOfQuotes[0].author}`;
+// Retrive HTML element
+let quote = document.querySelector('#quote');
+let author = document.querySelector('#author');
+let button = document.querySelector('#generator');
 
-function generateQuote(){
+// Set Default Quote
+quote.textContent = `\"${arrayOfQuotes[2].quote}\"`;
+author.textContent = `-${arrayOfQuotes[2].author}`;
+
+// Get Random Quote and Author from Array onClick Event
+button.addEventListener('click', function(e){
     const random = Number.parseInt(Math.random()*arrayOfQuotes.length + 1);
-    document.querySelector('#quote').textContent = `\"${arrayOfQuotes[random].quote}\"`;
-    document.querySelector('#author').textContent = `-${arrayOfQuotes[random].author}`;
-}
+    quote.textContent = `\"${arrayOfQuotes[random].quote}\"`;
+    author.textContent = `-${arrayOfQuotes[random].author}`;
+})
